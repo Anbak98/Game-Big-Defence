@@ -8,12 +8,12 @@ public enum MAP_STATE
     Init, Load, Save, Default, Build
 }
 
-public class MapManager : MonoBehaviour
+public class MapStateController : MonoBehaviour
 {
-    public static MapManager Instance;
+    //public static MapManager Instance;
 
-    [field: Header("Map")]
-    [field: SerializeField] public MapSaveData Map {  get; private set; }
+    //[field: Header("Map")]
+    //[field: SerializeField] public MapSaveData Map {  get; private set; }
 
     [Header("States")]
     [SerializeField] private MapStateLoad loadState;
@@ -35,11 +35,11 @@ public class MapManager : MonoBehaviour
             { MAP_STATE.Build, buildState }
         };
 
-        if (Instance != null || Instance == this)
-        {
-            return;
-        }
-        Instance = this;
+        //if (Instance != null || Instance == this)
+        //{
+        //    return;
+        //}
+        //Instance = this;
     }
 
     private void Start()

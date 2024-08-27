@@ -11,12 +11,15 @@ public class InvalidEffectTilePool : MonoBehaviour
 
     private GameObject parentObject;
 
-    void Start()
+    private void Awake()
     {
         pool = new List<GameObject>();
         parentObject = new("InvalidEffectGroup");
         parentObject.transform.parent = transform;
+    }
 
+    void Start()
+    {
         for (int i = 0; i < poolSize; i++)
         {
             GameObject obj = Instantiate(objectPrefab);

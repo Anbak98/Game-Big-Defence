@@ -23,7 +23,7 @@ public class MapController : MonoBehaviour
     private GameObject[,] gridObjectGroup;
     private GameObject[,] buildingObjectGroup;
 
-    private void Start()
+    private void Awake()
     {
         if (!this.Map)
         {
